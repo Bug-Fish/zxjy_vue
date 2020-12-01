@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <h1 v-bind:title="message">
+            {{content}}
+        </h1>
+        <h1 :title="message">
+            {{content}}
+        </h1> -->
+
+        <input type="text" v-bind:value="content">
+        <input type="text" v-model="content">
+        <p>{{content}}</p>
+        <button v-on:click="search()">search</button>
+        <form action="save" v-on:submit.prevent="search">
+            <input type="text" id="name">
+            <button type="submit">提交</button>   
+        </form>
+        
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                content: '我是标题',
+                message: '页面加载于' + new Date().toLocaleString(),
+                result: {}
+
+            },
+            methods: {
+                search() {
+                    console.log('search……')
+                },
+                f1() {
+                    console.log('f1111search……')
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<script>
+    // var a = 10;
+    // let a = 413;
+    // {
+    //     //有作用域，且只能声明一次
+    //     let a = 413;
+    //     var b = 43213;
+    // }
+    // console.log(b);
+    // console.log(a);
+
+    //常量定义必须初始化，且不能改变
+    //const PI = "3.1415926"
+
+    //es6解构赋值（数组）
+    let [x, y, z] = [1, 2, 3]
+    console.log(x,y,z)
+
+    //对象解构
+    let user = {"name" : "jyu", "sex" : "男"}
+    let {name, sex} = user
+    console.log(name + "*****" + sex)
+    
+
+    //模板字符串
+    //换行效果
+    let str1 = `hello,
+    ugyuigugug  hioiu `
+    console.log(str1)
+    //获取变量的值
+    let str2 = `weqf,wgtw,rqg,wr,${str1}wefwg`
+    console.log(str2)
+
+    function f1() {
+        return "hello f1"
+    }
+
+    let str3 = `demo, ${f1()}`
+    console.log(str3)
+
+    
+
+
+</script>

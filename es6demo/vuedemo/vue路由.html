@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <router-link to="/">首页</router-link>
+            <router-link to="/teacher">如klg果</router-link>
+            <router-link to="/student">如果</router-link>
+
+            <router-view></router-view>
+        </div>
+        <script src="vue.min.js"></script>
+        <script src="vue-router.min.js"></script>
+        <script>
+            const Welcome = { template: '<div>egtrhgrth</div>'}
+            const Teacher = { template: '<div>regrthetgtrhrth</div>'}
+            const Student = { template: '<div>rthrthtrhtwhwdthwrjrjry</div>'}
+            const routes = [
+                {path: '/', redirect: '/welcome'},
+                {path: '/welcome', component: 'Welcome'},
+                {path: '/teacher', component: 'Teacher'},
+                {path: '/student', component: 'Student'}
+            ]
+            const router = new VueRouter({
+                routes: routes
+            })
+            new Vue({
+                el: '#app',
+                router,
+                data: {
+                    
+                }
+            })
+        </script>
+    </body>
+
+</html>

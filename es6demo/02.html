@@ -1,0 +1,40 @@
+<script>
+    const age = 13;
+    const name = "lucy"
+    const p1 = {name : name, age : age}
+    const p2 = {name, age}
+    
+    console.log(p2)
+
+    const person1 = {
+        sayHi: function() {
+            console.log("Hi")
+        },
+        sayHello() {
+            console.log("hello")
+        }
+    }
+
+    person1.sayHello()
+
+    let person2 = {"name": "lucy", "age": 20}
+    let person4 = {"sex": "lucy", "height": 20}
+    //对象复制
+    let person3 = {...person2}
+    //对象合并
+    let person5 = {...person2, ...person4}
+
+    console.log(person2)
+    console.log(person3)
+    console.log(person5)
+
+
+    var f11 =  function(m) {
+        return m * m
+    }
+
+    var f12 = n => n *n
+    console.log(f12(43))
+
+
+</script>
